@@ -1,0 +1,49 @@
+table{
+    border-collapse: separate;
+    border-spacing: 1px;
+}
+td{
+    border: solid 1px grey;
+    padding: 10px;
+}
+th{
+    border: solid 1px grey;
+    padding: 10px;
+    margin: 0px;
+}
+h3{
+    font-size: 1.5em;
+}
+.tab{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+}
+#month{
+    color: blue;
+    font-size: 2em;
+}
+.tabBody tr:nth-child(even){
+    background-color: #FCB941;
+}
+.tabBody tr:nth-child(odd){
+    background-color: #F1654C;
+}
+.row:nth-child(odd) td:first-child{
+    background-color: #7E3661;
+    color: #fff;
+}
+.row:nth-child(even) td:first-child{
+    background-color: #888888;
+    color: #fff;
+}
+.row:nth-child(odd) td:last-child{
+    background-color: #8870FF;
+    color: #fff;
+}
+#no-border td:last-child{
+    border: none;
+}

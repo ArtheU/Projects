@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Tableau</title>
+    </head>
+    <body>
+        <div class="tab">
+            <h3>Planning des taches par équipes</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th rowspan="3">Equipes</th>
+                    </tr>
+                    <tr id="no-border">
+                        <th colspan="5" id="month">Janvier</th>
+                        <td rowspan="2"></td>
+                    
+                    </tr>
+                    <tr>
+                        <th>Lundi</th>
+                        <th>Mardi</th>
+                        <th>Mercredi</th>
+                        <th>Jeudi</th>
+                        <th>Vendredi</th>
+                    </tr>
+                </thead>
+                <tbody class="tabBody">
+                        <tr class="row">
+                            <td>Equipe1</td>
+                            <td colspan="3">Tach1</td>
+                            <td colspan="2">Tach2</td>
+                            <td rowspan="2">Semaine 1</td>
+                        </tr>
+                        <tr class="row">
+                            <td>Equipe2</td>
+                            <td colspan="2">Tach1</td>
+                            <td colspan="3">Tach2</td>
+                        </tr>
+                        <tr class="row">
+                            <td>Equipe1</td>
+                            <td colspan="1">Tach3</td>
+                            <td colspan="3">Tach4</td>
+                            <td colspan="1">Tach5</td>
+                            <td rowspan="2">Semaine 2</td>
+                        </tr>
+                        <tr class="row">
+                            <td>Equipe2</td>
+                            <td colspan="2">Tach3</td>
+                            <td colspan="3">Tach4</td>
+                        </tr>
+                        <tr class="row">
+                            <td>Equipe1</td>
+                            <td colspan="2">Tach5</td>
+                            <td colspan="3">Tach6</td>
+                            <td rowspan="2">Semaine 3</td>
+                        </tr>
+                        <tr class="row">
+                            <td>Equipe2</td>
+                            <td colspan="1">Tach5</td>
+                            <td colspan="4">Tach6</td>
+                        </tr>
+                        <tr class="row">
+                            <td>Equipe1</td>
+                            <td colspan="3">Tach7</td>
+                            <td colspan="2">Tach8</td>
+                            <td rowspan="2">Semaine 4</td>
+                        </tr>
+                        <tr class="row">
+                            <td>Equipe2</td>
+                            <td colspan="2">Tach7</td>
+                            <td colspan="3">Tach8</td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

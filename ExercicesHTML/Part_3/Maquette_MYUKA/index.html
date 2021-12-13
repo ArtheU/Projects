@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Myuka</title>
-    <style>
+    <!--<style>
         body{
             display: flex;
             flex-direction: column;
@@ -41,81 +41,103 @@
         p{
             align-items: center;
         }
-    </style>
+    </style>--> 
 </head>
 <body>
     <header>
-        <div id="logo">
-            <img src="./logo.png" alt="logo de Myuka">
-            <h1 style="color: red;">MYUKA</h1>
-        </div>
-        <div id="menuBar">
-            <nav class="menu">
-                <ul>
-                    <li style="margin: 5px;"><a href="">Home</a></li>
-                    <li style="margin: 5px;"><a href="">Products</a></li>
-                    <li style="margin: 5px;"><a href="">Contacts</a></li>
-                    <li style="margin: 5px;"><a href="">Help</a></li>
-                </ul>
-            </nav>
-        </div>
+        <table style="width: 80%; margin: auto;">
+            <thead>
+                <td><img src="./logo.png" alt="logo de Myuka"></td>
+                <td><h1 style="color: red;">MYUKA</h1></td>
+                <td style="width: 30%;">
+                    <ul style="list-style: none; ">
+                        <li style="margin: 5px; float: left;"><a href="">Home</a></li>
+                        <li style="margin: 5px; float: left;"><a href="">Products</a></li>
+                        <li style="margin: 5px; float: left;"><a href="">Contacts</a></li>
+                        <li style="margin: 5px; float: left;"><a href="">Help</a></li>
+                    </ul>
+                </td>
+            </thead>
+        </table>
     </header>
     <div id="intro" style="height: 20%;">
-        <table style="border: solid;">
-            <td><img src="./tasty-fresh-strawberries-yellow.jpg" alt="" style="width: 80%; min-width: 5%;"></td>
-            <td style="width: 50%;">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Maxime perferendis necessitatibus laboriosam a vitae, optio suscipit totam rem, et, 
-                quod nam dolore ex voluptas vero alias illo dolor deserunt enim.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Veniam possimus dolore nesciunt id quisquam harum numquam, deserunt maxime quasi voluptatem 
-                fuga eius ad maiores perferendis eum vel nobis cum adipisci?
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia consequuntur a et aspernatur, harum illum 
-                pariatur dolorum quae magnam blanditiis aliquam non iure maxime ad corporis explicabo voluptatum quam eligendi?</p>
-            </td>
-        </table>
-    </div>
-
-    <div id="prod" style="height: 20%; margin-top: 15px;">
-        <table style="border: solid;">
-            <td><img src="./logo.png" alt="" style="width: 80%; min-width: 5%;"></td>
+        <table style="border: solid; width: 80%; margin: auto;">
             <td style="width: 33%;">
-                <h2 style="color: red; align-items: center;">Produit</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Maxime perferendis necessitatibus laboriosam a vitae, optio suscipit totam rem, et, 
-                quod nam dolore ex voluptas vero alias illo dolor deserunt enim.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Veniam possimus dolore nesciunt id quisquam harum numquam, deserunt maxime quasi voluptatem 
-                fuga eius ad maiores perferendis eum vel nobis cum adipisci?
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia consequuntur a et aspernatur, harum illum 
-                pariatur dolorum quae magnam blanditiis aliquam non iure maxime ad corporis explicabo voluptatum quam eligendi?</p>
+                <img src="./tasty-fresh-strawberries-yellow.jpg" alt="" style="width: 100%; min-width: 5%; height: 100%;">
             </td>
-            <td><img src="./sweets.png" alt="" style="width: 50%;"></td>
-        </table>
-    </div>
+            <td style="width: 30%;">
 
-    <div id="description" style="height: 20%; margin-top: 15px;">
-        <table style="border: solid;">
-            <tr>
-                <td><img src="./red-tomato-ingredients-isolated.jpg" alt="" style="width: 50%; min-width: 5%;"></td>
-                <td style="width: 33%;">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </td>
+            <td style="width: 33%;">
+                <p style="text-align: center;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Maxime perferendis necessitatibus laboriosam a vitae, optio suscipit totam rem, et, 
                     quod nam dolore ex voluptas vero alias illo dolor deserunt enim.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Veniam possimus dolore nesciunt id quisquam harum numquam, deserunt maxime quasi voluptatem 
                     fuga eius ad maiores perferendis eum vel nobis cum adipisci?
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia consequuntur a et aspernatur, harum illum 
-                    pariatur dolorum quae magnam blanditiis aliquam non iure maxime ad corporis explicabo voluptatum quam eligendi?</p>
+                    pariatur dolorum quae magnam blanditiis aliquam non iure maxime ad corporis explicabo voluptatum quam eligendi?
+                </p>
+                
+            </td>
+        </table>
+    </div>
+
+    <div id="prod" style="height: 20%; margin-top: 15px;">
+        <table style="border: solid; width: 80%; margin: auto;">
+            <td style="width: 33%;">
+                <img src="./logo.png" alt="" style="width: 30%; min-width: 5%; margin: 33%;">
+            </td>
+            <td style="width: 33%; margin: auto;">
+                <h2 style="color: red; align-items: center;">Produit</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Maxime perferendis necessitatibus laboriosam a vitae, optio suscipit totam rem, et, 
+                    quod nam dolore ex voluptas vero alias illo dolor deserunt enim.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Veniam possimus dolore nesciunt id quisquam harum numquam, deserunt maxime quasi voluptatem 
+                    fuga eius ad maiores perferendis eum vel nobis cum adipisci?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia consequuntur a et aspernatur, harum illum 
+                    pariatur dolorum quae magnam blanditiis aliquam non iure maxime ad corporis explicabo voluptatum quam eligendi?
+                </p>
+            </td>
+            <td style="width: 33%; margin: auto;">
+                <img src="./sweets.png" alt="" style="width: 30%; margin: 33%;">
+            </td>
+        </table>
+    </div>
+
+    <div id="description" style="height: 20%; margin-top: 15px;">
+        <table style="border: solid; width: 80%; margin: auto;">
+            <tr>
+                <td><img src="./red-tomato-ingredients-isolated.jpg" alt="" style="width: 100%; min-width: 5%;"></td>
+                <td style="width: 30%;">
+
+                </td>
+                <td style="width: 33%;">
+                    <p style="margin: auto;">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Maxime perferendis necessitatibus laboriosam a vitae, optio suscipit totam rem, et, 
+                        quod nam dolore ex voluptas vero alias illo dolor deserunt enim.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Veniam possimus dolore nesciunt id quisquam harum numquam, deserunt maxime quasi voluptatem 
+                        fuga eius ad maiores perferendis eum vel nobis cum adipisci?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia consequuntur a et aspernatur, harum illum 
+                        pariatur dolorum quae magnam blanditiis aliquam non iure maxime ad corporis explicabo voluptatum quam eligendi?
+                    <p>
                 </td>
             </tr>
         </table>
     </div>
 
     <div id="ingredients" style="height: 20%; margin-top: 15px;">
-        <table style="border: solid;">
+        <table style="border: solid; width: 80%; margin: auto;">
             <tr>
-                <td><img src="./ingredients_table.png" alt="" style="width: 50%; min-width: 5%;"></td>
+                <td><img src="./ingredients_table.png" alt="" style="width: 100%; min-width: 5%;"></td>
+                <td style="width: 30%;">
+
+                </td>
                 <td style="width: 33%;">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Maxime perferendis necessitatibus laboriosam a vitae, optio suscipit totam rem, et, 
@@ -131,7 +153,7 @@
     </div>
     
     <div id="visual" style="height: 20%; margin-top: 15px;">
-        <table style="border: solid;">
+        <table style="border: solid; width: 80%; margin: auto;">
             <tr>
                 <td style="width: 33%;"><img src="./utensils-lemonsqueezer.jpg" alt="" style="width: 100%; min-width: 5%;"></td>
                 <td style="width: 33%;"><img src="./tomato.jpg" alt="" style="width: 100%; min-width: 5%;"></td>
