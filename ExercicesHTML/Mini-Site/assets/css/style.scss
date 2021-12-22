@@ -11,10 +11,10 @@ body{
     background: transparent;
 }
 
-body::before{
+.home-bg::before{
     content: "";
     position: fixed;
-    background: #040404 url("../media/img/bg-1.jpg") no-repeat 50% 50%;
+    background: #040404 url("../media/img/bg-1.jpg") no-repeat 80% 20%;
     background-size: cover;
     left: 0;
     right: 0;
@@ -41,6 +41,9 @@ a:hover{
 
 h1, h2, h3, h4, h5, h6{
     font-family: "Raleway", sans-serif;
+}
+h4{
+    font-weight: bold;
 }
 
 /*=========================================================

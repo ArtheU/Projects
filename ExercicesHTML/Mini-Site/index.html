@@ -18,13 +18,14 @@
         <link rel="stylesheet" href="./assets/css/style.css">
         <title>Universe</title>
     </head>
-    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <body class="home-bg" data-spy="scroll" data-target=".navbar" data-offset="50">
 
         <!--=============Header=============-->
         <header id="header" class="header-tops">
             <div class="container">
                 <h1><a href="index.html">Our Universe</a></h1>
                 <h2>Three <span>Planets</span> from our Solar System</h2>
+                
                 <!--======Socials Links======-->
                 <div class="social-links">
                     <a href="#"><i class="icofont-twitter"></i></a>
@@ -48,10 +49,10 @@
                                 <a class="nav-link" aria-current="page" href="#about">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Mars</a>
+                                <a class="nav-link" href="./mars.html">Mars</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Jupiter</a>
+                                <a class="nav-link" href="./jupiter.html" tabindex="-1" aria-disabled="true">Jupiter</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Venus</a>
@@ -67,7 +68,7 @@
 
         <div class="container-fluid about-section" id="about">
             <div class="planet-box">
-                <div class="container mars-box" style="cursor: pointer;">
+                <div class="container mars-box" onclick="location.href='mars.html'" style="cursor: pointer;">
                 </div>
                 <div class="mars-hide border">
                     <p>Mars is the fourth planet from the sun and the second-smallest planet in the Solar System. <br>
@@ -75,7 +76,7 @@
                         The "Red Planet" appears in the 2015 film adaptation "Martian" by Director Ridley Scott staring Matt Damon
                     </p>
                 </div>
-                <div class="container jupiter-box" style="cursor: pointer;">
+                <div class="container jupiter-box"  onclick="location.href='jupiter.html'" style="cursor: pointer;">
                 </div>
                 <div class="jupiter-hide border">
                     <p>Jupiter is the fifth planet from the sun and the largest is the Solar System. <br>
@@ -92,12 +93,12 @@
                     </p>
                 </div>
             </div>
-        </div>
+        </div> <!--=============End About=============-->
 
                     <!--=============Back To Top=============-->
 
         <img id="topBtn" src="./assets/media/img/spaceship.png" alt=""  onclick="location.href='#header'" style="cursor: pointer;">
 
-                <!--=============End Back To Top=============-->
+                    <!--=============End Back To Top=============-->
     </body>
 </html>

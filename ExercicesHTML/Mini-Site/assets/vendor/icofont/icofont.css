@@ -58,6 +58,11 @@ url("./fonts/icofont.woff") format("woff");
   content: "\ecbb";
 }
 
+.icofont-brand-wikipedia:before
+{
+  content: "\e958";
+}
+
 .icofont-xs
 {
   font-size: .5em;
