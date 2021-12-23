@@ -1,0 +1,38 @@
+ZIBEL Olivier
+
+----------------------------------	CSS Selector
+
+planets.css |
+---------------------
+
+.mars-bg::before | Permet d'intégrer des valeurs avant le contenu ------> mars.html -> background du body
+
+html * | Sélectionne tous les éléments
+
+.system_orbit:nth-child(x) | Sélectionne tous les élements system_orbit qui sont l'enfant x de son parent ------> mars.html -> #about animation orbit system
+
+.flip-card:hover | Sélectionne l'élément flip-card quand il est survolé par le pointeur de la souris -----> jupiter.html & venus.html -> #about card
+
+.flip-card:hover .flip-card-inner | Sélectionne tous les éléments .flip-card-inner qui sont descendant de flip-card:hover
+ 
+.flip-card-front, .flip-card-back | Sélectionne tous les élements .flip-card-front et .flip-card-back
+
+
+style.css |
+---------------------
+
+.nav-menu li + li | Sélectionne le premier li placé après un li, dans l'élément .nav-menu ------> all html -> menu nav
+
+.nav-menu li:hover > a | Sélectionne tous les li:hover dont le parent est a qui est lui même un descendant d'un .nav-menu
+
+
+----------------------------------	CSS @Media
+
+CSS |
+---------------------
+
+Les images de planètes de la page index passent d'une position absolute à une positions flex columns pour les écrans de moins de 1024px
+
+La taille en pixel du h1 est réduite pour les écrans de moins de 992px
+
+Le passage en flex column pour les éléments de la section #about des pages mars, jupiter & venus.html
