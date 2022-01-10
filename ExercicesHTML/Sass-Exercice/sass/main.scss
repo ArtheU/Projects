@@ -1,0 +1,302 @@
+/* @use'./partials/variables'; */
+/* =========================================================
+---------------#GENERAL
+==========================================================*/
+//variables couleurs
+$color-theme-light-one : #ff0;
+$color-theme-light-two : #ff4;
+$color-theme-dark-one : #222;
+$color-theme-dark-two : #444;
+$color-theme-grey : #eee;
+$color-theme-light : #fff;
+
+$font-one : "Grand Hotel", serif;
+$font-two : "Open Sans", Helvetica, Arial, sans-serif;
+
+
+
+//variables font
+
+$grandHotel: "Grand Hotel", serif;
+$openSans: "Open Sans", Helvetica, Arial, sans-serif;
+/*=========================================================
+---------------#HEADER
+==========================================================*/
+
+header{
+
+    background-color: $color-theme-dark-one;
+    padding: 2%;
+
+    h1{
+        color:$color-theme-light-one;
+        font-family:$font-one;
+        margin: 0;
+        text-align: center;
+
+    }
+
+    p{
+
+        color: $color-theme-light;
+        font-family:$font-two;  
+        text-align: center;
+
+    }
+
+}
+
+//centrer l'outil de recherche//
+
+#search{
+
+        display: block;
+        margin: 0 auto;
+}
+
+aside{
+    background-color: $color-theme-dark-one;
+}
+
+
+nav{
+
+    ul{
+
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li{
+
+            text-align: center;
+            border-bottom: $color-theme-light-two 2px solid;
+            width: 50%;
+            margin: 0 auto;
+            padding-bottom: 2%;
+            margin-bottom: 2%;
+            &:last-child{
+                border-bottom: none;
+            }
+            a{
+                color: $color-theme-grey;
+                font-family: $font-two;
+                text-decoration: none;
+            }
+        }
+        
+    }
+
+}
+
+.copyright{
+    font-family: $font-one;
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================================================
+---------------#GENERAL
+==========================================================*/
+.limonade{
+    background: url(../images/bg-presentation.jpg);
+    background-size: cover;
+    z-index: -1;
+    h1{
+        font-family: $font-one;
+        color: $color-theme-light;
+        font-weight: 300;
+        margin-left: 2%;
+        margin: 0;
+    }
+    p{
+        color: $color-theme-grey;
+        font-family: $font-two;
+        margin-left: 2%;
+    }
+    blockquote{
+        color: $color-theme-grey;
+        text-align: right;
+        .quote{
+            font-family: $font-two;
+        }
+        .mag{
+            font-family: $font-one;
+        }
+    }
+}
+
+.produits{
+    h1{
+        font-family: $font-one;
+        font-size: 2.5em;
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+        .product{
+            border: 1px solid black;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+            padding: 5px;
+            h2{
+                font-family: $font-one;
+                color: $color-theme-dark-one;
+                margin-left: 5%;
+            }
+            p{
+                font-family: $font-two;
+                color: $color-theme-dark-two;
+                font-weight: 700;
+                margin-left: 5%;
+            }
+            img{
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+    a{
+        text-decoration: none;
+        align-self: center;
+        width: 30%;
+        height: 20%;
+        padding: 10px 20px;
+        background-color: $color-theme-dark-one;
+        color: $color-theme-light;
+        font-family: $font-one;
+        font-size: 1.2em;
+        font-weight: 400;
+        margin-bottom: 5%;
+        text-align: center;
+    }
+}
+
+.production{
+    background: url(../images/bg-production.jpg) no-repeat;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    h1{
+        font-family: $font-one;
+        color: $color-theme-light;
+    }
+    p{
+        font-family: $font-two;
+        color: $color-theme-grey;
+    }
+    .cards{
+        .step{
+            figcaption{
+                color: $color-theme-grey;
+            }
+        }
+    }
+    a{
+        text-decoration: none;
+        align-self: center;
+        width: 30%;
+        height: 20%;
+        padding: 10px 20px;
+        background-color: $color-theme-light-one;
+        color: $color-theme-dark-one;
+        font-family: $font-one;
+        font-size: 1.2em;
+        font-weight: 700;
+        margin-bottom: 5%;
+    }
+}
+
+.client{
+    display: flex;
+    flex-direction: column;
+    h1{
+        font-family: $font-one;
+        color: $color-theme-dark-one;
+    }
+    .cards{
+        .client{
+            border: 1px solid black;
+            padding: 5px;
+            text-align: left;
+            img{
+                object-fit: cover;
+                width: 100%;
+            }
+            figcaption{
+                h2{
+                    font-family: $font-one;
+                    margin-left: 5%;
+                }
+                blockquote{
+                    font-family: $font-two;
+                    margin-left: 5%;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+    a{
+        text-decoration: none;
+        align-self: center;
+        width: 30%;
+        height: 20%;
+        padding: 10px 20px;
+        background-color: $color-theme-dark-one;
+        color: $color-theme-light;
+        font-family: $font-one;
+        font-size: 1.2em;
+        font-weight: 400;
+        margin-bottom: 5%;
+        text-align: center;
+    }
+}
+
+.contact{
+    background: url(../images/bg-contact.jpg) 0% 30% no-repeat;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    h1{
+        font-family: $font-one;
+        color: $color-theme-light;
+        font-weight: 500;
+        text-align: left;
+        margin-left: 5%;
+    }
+    form{
+        width: 80%;
+        p{
+            display: flex;
+            flex-direction: column;
+            color: $color-theme-grey;
+            font-size: 1.3em;
+            font-weight: 400;
+            #email{
+                opacity: 0.7;
+            }
+            textarea{
+                opacity: 0.7;
+            }
+        }
+    }
+    .btn-submit{
+        text-decoration: none;
+        align-self: center;
+        width: 50%;
+        height: 20%;
+        padding: 10px 20px;
+        background-color: $color-theme-light-one;
+        color: $color-theme-dark-one;
+        font-family: $font-one;
+        font-size: 1.2em;
+        font-weight: 700;
+        margin-bottom: 5%;
+        border: none;
+    }
+}

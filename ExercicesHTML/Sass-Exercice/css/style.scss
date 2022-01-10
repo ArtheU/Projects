@@ -1,0 +1,19 @@
+/*=========================================================
+---------------#GENERAL
+==========================================================*/
+$color-theme-light-one : #ff0;
+$color-theme-light-two : #ff4;
+$color-theme-dark-one : #222;
+$color-theme-dark-two : #444;
+$color-theme-grey : #eee;
+$color-theme-light : #fff;
+
+$font-one : "Grand Hotel", serif;
+$font-two : "Open Sans", Helvetica, Arial, sans-serif;
+/*=========================================================
+---------------#HEADER
+==========================================================*/
+
+header h1{
+    color: $color-theme-light-one;
+}
