@@ -19,45 +19,114 @@ $font-two : "Open Sans", Helvetica, Arial, sans-serif;
 
 $grandHotel: "Grand Hotel", serif;
 $openSans: "Open Sans", Helvetica, Arial, sans-serif;
+
+/* ---------- Mixins ---------- */
+
+@mixin btn ($color, $bg-color){
+    text-decoration: none;
+    align-self: center;
+    width: 30%;
+    height: 20%;
+    padding: 10px 20px;
+    background-color: $bg-color;
+    color: $color;
+    font-family: $font-one;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+@mixin text ($color, $font, $align){  
+    color: $color;
+    font-family:$font;  
+    text-align: $align;
+}
+
+@mixin fl-col{
+    display: flex;
+    flex-direction: column;
+}
 /*=========================================================
 ---------------#HEADER
 ==========================================================*/
-
 header{
 
     background-color: $color-theme-dark-one;
     padding: 2%;
+    @media (min-width: 1024px) {
+        padding: 0;
+    }
 
     h1{
-        color:$color-theme-light-one;
-        font-family:$font-one;
+        @include text ($color-theme-light-one, $font-one, center);
         margin: 0;
-        text-align: center;
-
+        @media (min-width: 1024px) {
+            text-align: left;
+            margin-left: 1%;
+            font-size: 50px;
+            font-weight: 400;
+        }
     }
 
     p{
+        @include text ($color-theme-light, $font-two, center);
+        @media (min-width: 1024px) {
+            text-align: left;
+            margin: 0;
+            margin-left: 1%;
+        }
 
-        color: $color-theme-light;
-        font-family:$font-two;  
-        text-align: center;
+    }
 
+    @media (min-width: 1024px) {
+        padding: 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        h1{
+            width: 50%;
+        }
+        p{
+            width: 50%;
+            order: 3;
+        }
+        form{
+            align-self: center;
+            order: 2;
+        }
     }
 
 }
 
-//centrer l'outil de recherche//
+
 
 #search{
 
         display: block;
         margin: 0 auto;
+        @media (min-width: 1024px) {
+        }
 }
 
 aside{
     background-color: $color-theme-dark-one;
+    @media (min-width: 1024px) {
+        position: relative;
+        width: 35%;
+    }
+}
+.content{
+
+    @media (min-width: 1024px) {  
+        display: flex;
+    }
+        
 }
 
+/*=========================================================
+---------------#NAV
+==========================================================*/
 
 nav{
 
@@ -66,6 +135,12 @@ nav{
         list-style-type: none;
         padding: 0;
         margin: 0;
+
+        @media (min-width: 1024px) {
+            li + li{
+                margin-top: 5%;
+            }
+        }
 
         li{
 
@@ -91,24 +166,25 @@ nav{
 
 .copyright{
     font-family: $font-one;
-    visibility: hidden;
     margin: 0;
     padding: 0;
+    visibility: hidden;
+    @media (min-width: 1024px) {
+        color: $color-theme-light-one;
+    }
 }
 
 /* =========================================================
----------------#GENERAL
+---------------#LIMONADE
 ==========================================================*/
 .limonade{
     background: url(../images/bg-presentation.jpg);
     background-size: cover;
     z-index: -1;
     h1{
-        font-family: $font-one;
-        color: $color-theme-light;
+        @include text ($color-theme-light, $font-one, left);
         font-weight: 300;
-        margin-left: 2%;
-        margin: 0;
+        margin: auto;
     }
     p{
         color: $color-theme-grey;
@@ -125,16 +201,48 @@ nav{
             font-family: $font-one;
         }
     }
+    @media (min-width: 1024px) {
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        h1{
+            width: 50%;
+            margin-top: 2%;
+            margin-left: 2%;
+            font-size: 65px;
+        }
+        p{
+            width: 50%;
+            font-size: 20px;
+            font-weight: 200;
+        }
+        blockquote{
+            width: 40%;
+            font-size: 40px;
+            font-style: italic;
+            align-self: right;
+            margin-left: 10%;
+            margin-top: 5%;
+            .mag{
+                font-size: 25px;
+            }
+        }
+    }
 }
+
+
+/*=========================================================
+---------------#PRODUIT
+==========================================================*/
 
 .produits{
     h1{
-        font-family: $font-one;
+        @include text ($color-theme-dark-one, $font-one, left);
         font-size: 2.5em;
     }
     .cards{
-        display: flex;
-        flex-direction: column;
+        @include fl-col();
         .product{
             border: 1px solid black;
             width: 80%;
@@ -161,33 +269,44 @@ nav{
         }
     }
     a{
-        text-decoration: none;
-        align-self: center;
-        width: 30%;
-        height: 20%;
-        padding: 10px 20px;
-        background-color: $color-theme-dark-one;
-        color: $color-theme-light;
-        font-family: $font-one;
-        font-size: 1.2em;
-        font-weight: 400;
-        margin-bottom: 5%;
-        text-align: center;
+        @include btn($color-theme-light, $color-theme-dark-one)
+    }
+    @media (min-width: 1024px) {
+        @include fl-col();
+        h1{
+            margin-left: 5%;
+            font-size: 60px;
+            font-weight: 400;
+        }
+        .cards{
+            flex-direction: row;
+        }
+        a{
+            align-self: flex-end;
+            width: 20%;
+            margin: 0;
+            margin-bottom: 2%;
+            margin-right: 3.5%;
+            font-size: 30px;
+        }
     }
 }
 
+
+/*=========================================================
+---------------#PRODUCTION
+==========================================================*/
 .production{
     background: url(../images/bg-production.jpg) no-repeat;
-    display: flex;
-    flex-direction: column;
     text-align: center;
+    @include fl-col();
     h1{
-        font-family: $font-one;
-        color: $color-theme-light;
+        @include text ($color-theme-light, $font-one, right);
+        margin-right: 5%;
     }
     p{
-        font-family: $font-two;
-        color: $color-theme-grey;
+        @include text ($color-theme-grey, $font-two, right);
+        margin-right: 5%;
     }
     .cards{
         .step{
@@ -197,26 +316,46 @@ nav{
         }
     }
     a{
-        text-decoration: none;
-        align-self: center;
-        width: 30%;
-        height: 20%;
-        padding: 10px 20px;
-        background-color: $color-theme-light-one;
-        color: $color-theme-dark-one;
-        font-family: $font-one;
-        font-size: 1.2em;
-        font-weight: 700;
-        margin-bottom: 5%;
+        @include btn($color-theme-dark-one, $color-theme-light-one)
+    }
+    @media (min-width: 1024px) {
+        h1{
+            text-align: right;
+            margin: 2%;
+            font-size: 50px;
+            font-weight: 400;
+        }
+        p{
+            text-align: right;
+            width: 40%;
+            align-self: flex-end;
+            margin-right: 2%;
+            margin-top: 0;
+            font-size: 20px;
+        }
+        .cards{
+            display: flex;
+            flex-direction: row;
+            font-size: 30px;
+        }
+        a{
+            align-self: flex-end;
+            margin-right: 5%;
+            width: 20%;
+            font-size: 30px;
+        }
     }
 }
 
+
+/*=========================================================
+---------------#CLIENT
+==========================================================*/
 .client{
-    display: flex;
-    flex-direction: column;
+    @include fl-col();
     h1{
-        font-family: $font-one;
-        color: $color-theme-dark-one;
+        @include text ($color-theme-dark-one, $font-one, left);
+        margin-left: 5%;
     }
     .cards{
         .client{
@@ -241,42 +380,50 @@ nav{
         }
     }
     a{
-        text-decoration: none;
-        align-self: center;
-        width: 30%;
-        height: 20%;
-        padding: 10px 20px;
-        background-color: $color-theme-dark-one;
-        color: $color-theme-light;
-        font-family: $font-one;
-        font-size: 1.2em;
-        font-weight: 400;
-        margin-bottom: 5%;
-        text-align: center;
+        @include btn($color-theme-light, $color-theme-dark-one)
+    }
+    @media (min-width: 1024px) {
+        h1{
+            margin-left: 5%;
+            font-size: 60px;
+            font-weight: 400;
+        }
+        .cards{
+            display: flex;
+
+            .client{
+                width: 33%;
+            }
+        }
+        a{
+            align-self: flex-end;
+            margin-right: 3.4%;
+            width: 20%;
+            font-size: 30px;
+        }
     }
 }
 
+
+/*=========================================================
+---------------#CONTACT
+==========================================================*/
 .contact{
     background: url(../images/bg-contact.jpg) 0% 30% no-repeat;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    align-items: center;
+    @include fl-col();
     h1{
-        font-family: $font-one;
-        color: $color-theme-light;
+        @include text ($color-theme-light, $font-one, left);
         font-weight: 500;
-        text-align: left;
         margin-left: 5%;
     }
     form{
         width: 80%;
         p{
-            display: flex;
-            flex-direction: column;
+            @include fl-col();
             color: $color-theme-grey;
             font-size: 1.3em;
             font-weight: 400;
+            margin-left: 5%;
             #email{
                 opacity: 0.7;
             }
@@ -286,17 +433,18 @@ nav{
         }
     }
     .btn-submit{
-        text-decoration: none;
-        align-self: center;
-        width: 50%;
-        height: 20%;
-        padding: 10px 20px;
-        background-color: $color-theme-light-one;
-        color: $color-theme-dark-one;
-        font-family: $font-one;
-        font-size: 1.2em;
-        font-weight: 700;
-        margin-bottom: 5%;
         border: none;
+        @include btn($color-theme-dark-one, $color-theme-light-one)
+    }
+    @media (min-width: 1024px) {
+        @include fl-col();
+        h1{
+            font-size: 60px;
+            align-self: flex-start;
+        }
+        p{
+            width: 50%;
+            margin-left: 7%;
+        }
     }
 }
