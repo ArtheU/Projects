@@ -17,7 +17,6 @@ body {
 .container {
   height: 15vh;
   width: 100%;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,6 +43,170 @@ body {
   justify-content: space-between;
 }
 
+.navbar-expand-lg {
+  z-index: 111;
+  text-align: center;
+}
+
 .bi-cart {
   font-size: 36px;
+}
+
+/*=========================================================
+---------------#CATEGORIES
+==========================================================*/
+.btn-secondary {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 0px;
+}
+
+.dropdown-menu {
+  width: 100%;
+  text-align: center;
+}
+
+/*=========================================================
+---------------#SLIDER
+==========================================================*/
+.slider-container {
+  height: 30vh;
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+h1 {
+  margin-top: 2%;
+  color: #42fabd;
+  text-align: center;
+}
+
+.slide-box {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.left-img {
+  height: 60%;
+  width: 20%;
+  background: "";
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: all 2s ease-in-out;
+}
+
+.center-img {
+  height: 80%;
+  width: 60%;
+  background: "";
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 2s ease-in-out;
+}
+
+.right-img {
+  height: 60%;
+  width: 20%;
+  background: "";
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transition: all 2s ease-in-out;
+}
+
+.icofont-rounded-left {
+  font-size: 50px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.icofont-rounded-right {
+  font-size: 50px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+/*=========================================================
+---------------#ARTICLE
+==========================================================*/
+.article {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: auto;
+  width: 100%;
+}
+
+.article-box {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.article-img-box {
+  background-color: red;
+  height: 90%;
+  width: 100px;
+}
+
+.article-text-box {
+  height: auto;
+  width: 50%;
+}
+
+.article-text-box p {
+  line-height: 1em;
+}
+
+/*=========================================================
+---------------#DELIVERY AND PAY
+==========================================================*/
+.delandpay {
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  width: 100%;
+}
+
+.delandpay-box {
+  display: flex;
+  margin-top: 5%;
+  justify-content: space-evenly;
+}
+
+.delandpay-img-box {
+  height: 20vh;
+  width: 50%;
+  background-color: red;
+}
+
+.delandpay-text-box {
+  width: 40%;
+}
+
+.delandpay-text-box p {
+  line-height: 1em;
 }/*# sourceMappingURL=style.css.map */
