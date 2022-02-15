@@ -1,36 +1,39 @@
-let slide = ["https://picsum.photos/900/500?grayscale","https://picsum.photos/seed/picsum/900/500","https://picsum.photos/id/237/900/500"];
-        // Je remplis mon tableau slide de 3 url images
+/* ------------------------------SLIDER------------------------------ */
 
-let leftSlide = document.getElementsByClassName("left-img")[0]; // J'attribue a ma variable leftSlide la div left-img
-let mainSlide = document.getElementsByClassName("center-img")[0]; // de mon html
-let rightSlide = document.getElementsByClassName("right-img")[0]; // Même chose pour le mainSlide et rightSlide pour leurs div respective
-let i = 0; // variable compteur que je définis à 0
-let j = 0;  // variable compteur que je définis à 0
+let slide = ["'assets/media/seasonal_promotions/Garden_tools_pix.jpg'"
+    ,"'assets/media/seasonal_promotions/GettyImages.jpg'"
+    ,"'assets/media/seasonal_promotions/proud-gardener.jpg'"];
+        
+
+let leftSlide = document.getElementsByClassName("left-img")[0]; 
+let mainSlide = document.getElementsByClassName("center-img")[0];
+let rightSlide = document.getElementsByClassName("right-img")[0];
+let i = 0;
 
 
         /* -----------------------Bouton Gauche---------------------------- */
 document.getElementsByClassName("icofont-rounded-left")[0].addEventListener("click", function(){
-    if(i == 0){ // Si mon compteur est à 0
-        leftSlide.style.background = "url("+slide[2] +") 50% 50% no-repeat" // permets de modifier le style CSS background de ma div "left-img"
+    if(i == 0){ 
+        leftSlide.style.background = "url("+slide[2] +") 50% 50% no-repeat";
         mainSlide.style.background = "url("+slide[0] +") no-repeat";
         rightSlide.style.background = "url("+slide[1] +") 50% 50% no-repeat";
-        i++ // Alors j'assigne à toutes mes divs une image différente du tableau, ici une position plus basse par rapport à l'affichage de base
-    } else if(i == 1){  // Si mon compteur est à 1
+        i++ 
+    } else if(i == 1){ 
         leftSlide.style.background = "url("+slide[1] +") 50% 50% no-repeat"
         mainSlide.style.background = "url("+slide[2] +") no-repeat";
         rightSlide.style.background = "url("+slide[0] +") 50% 50% no-repeat";
-        i++  // Même principe, mon tableau ayant 3 images, les positions sont 0 - 1 et 2. 
+        i++  
     } else {
-        leftSlide.style.background = "url("+slide[0] +") 50% 50% no-repeat" // La positions 0 prendra l'image de la position 2 au prochain clique pour boucler les images
+        leftSlide.style.background = "url("+slide[0] +") 50% 50% no-repeat"
         mainSlide.style.background = "url("+slide[1] +") no-repeat";
         rightSlide.style.background = "url("+slide[2] +") 50% 50% no-repeat";
-        i = 0; // Même principe
+        i = 0;
     }
 });
 
         /* -----------------------Bouton Droit---------------------------- */
 document.getElementsByClassName("icofont-rounded-right")[0].addEventListener("click", function(){
-    if(i == 0){ // Principe identique au bouton gauche
+    if(i == 0){ 
         leftSlide.style.background = "url("+slide[1] +") 50% 50% no-repeat"
         mainSlide.style.background = "url("+slide[2] +") no-repeat";
         rightSlide.style.background = "url("+slide[0] +") 50% 50% no-repeat";
@@ -48,6 +51,27 @@ document.getElementsByClassName("icofont-rounded-right")[0].addEventListener("cl
     }
 });
 
-leftSlide.style.background = "url("+slide[0] +") 50% 50% no-repeat"; // Affectation des images du tableau pour avoir l'affichage par défaut avant qu'un clique ne soit effectuer par l'utilisateur
+leftSlide.style.background = "url("+slide[0] +") 50% 50% no-repeat";
 mainSlide.style.background = "url("+slide[1] +") no-repeat";
 rightSlide.style.background = "url("+slide[2] +") 50% 50% no-repeat";
+
+/* ------------------------------ARTICLES------------------------------ */
+
+let articles = ["url('assets/media/articles/article1.png') no-repeat","url('assets/media/articles/article2.jpg') no-repeat","url('assets/media/articles/article3.jpg') no-repeat","url('assets/media/articles/article4.jpg') no-repeat"];
+let articleDiv = document.getElementsByClassName('article-img-box');
+
+for (let index = 0; index < articleDiv.length; index++) {
+    const element = articleDiv[index];
+    element.style.background = articles[index];
+};
+
+/* ------------------------------DELANDPAY------------------------------ */
+
+let delandpay = ["url('assets/media/delivery.jpg') no-repeat","url('assets/media/payments.jpg') no-repeat"];
+let delandpayDiv = document.getElementsByClassName('delandpay-img-box');
+
+for (let index = 0; index < delandpayDiv.length; index++) {
+    const element = delandpayDiv[index];
+    element.style.background = delandpay[index];
+    
+}
