@@ -3,12 +3,28 @@
 ==========================================================*/
 body {
   margin: 0;
+  background: url("../media/bg.jpg");
+  z-index: -111;
 }
 
 .flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: auto;
+  margin: 0;
+}
+
+.container-fluid {
+  background-color: #fff;
 }
 
 /*=========================================================
@@ -21,6 +37,11 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+@media (orientation: landscape) {
+  .container {
+    height: 20vh;
+  }
+}
 
 .header-row {
   display: flex;
@@ -28,13 +49,23 @@ body {
 }
 
 .logo-box {
-  border: 1px solid red;
-  height: 10vh;
-  width: auto;
+  background: url("../media/logo.png") no-repeat;
+  background-size: contain;
+  height: 100%;
+  width: 30%;
+}
+
+.nav-cart {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.search-area {
+  width: 50%;
 }
 
 .nav-box {
-  border: 1px solid blue;
   width: auto;
   min-width: 50%;
   height: 10vh;
@@ -42,14 +73,47 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media (orientation: landscape) {
+  .nav-box {
+    min-width: 30%;
+  }
+}
 
 .navbar-expand-lg {
   z-index: 111;
   text-align: center;
+  width: 100%;
+  padding: 0;
+}
+@media (orientation: landscape) {
+  .navbar-expand-lg {
+    padding: 0;
+  }
 }
 
 .bi-cart {
   font-size: 36px;
+}
+
+.cart-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li:hover {
+  background-color: #6ABF16;
+}
+
+.navbar-toggler-icon {
+  background: url("../media/menuv2.png") no-repeat !important;
+  display: inline-block !important;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 100% !important;
 }
 
 /*=========================================================
@@ -79,10 +143,20 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
+@media (min-width: 1024px) {
+  .slider-container {
+    height: 50vh;
+  }
+}
+@media (orientation: landscape) {
+  .slider-container {
+    height: 60vh;
+  }
+}
 
 h1 {
   margin-top: 2%;
-  color: #42fabd;
+  color: #6ABF16;
   text-align: center;
 }
 
@@ -98,9 +172,7 @@ h1 {
 .left-img {
   height: 60%;
   width: 20%;
-  background: "";
-  -o-object-fit: cover;
-     object-fit: cover;
+  background-size: cover !important;
   opacity: 0.5;
   display: flex;
   align-items: center;
@@ -109,20 +181,16 @@ h1 {
 }
 
 .center-img {
+  background-size: cover !important;
+  transition: all 2s ease-in-out;
   height: 80%;
   width: 60%;
-  background: "";
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: all 2s ease-in-out;
 }
 
 .right-img {
   height: 60%;
   width: 20%;
-  background: "";
-  -o-object-fit: cover;
-     object-fit: cover;
+  background-size: cover !important;
   opacity: 0.5;
   display: flex;
   align-items: center;
@@ -135,46 +203,107 @@ h1 {
   opacity: 1;
   cursor: pointer;
 }
+@media (min-width: 1024px) {
+  .icofont-rounded-left {
+    font-size: 100px;
+  }
+}
 
 .icofont-rounded-right {
   font-size: 50px;
   opacity: 1;
   cursor: pointer;
 }
+@media (min-width: 1024px) {
+  .icofont-rounded-right {
+    font-size: 100px;
+  }
+}
 
 /*=========================================================
 ---------------#ARTICLE
 ==========================================================*/
 .article {
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   height: auto;
   width: 100%;
+  background-color: #fff;
 }
 
 .article-box {
-  height: 10vh;
+  height: 20vh;
   width: 100%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .article-box {
+    height: 20vh;
+  }
+}
+@media (orientation: landscape) {
+  .article-box {
+    height: 50vh;
+    margin-bottom: 1%;
+  }
 }
 
 .article-img-box {
-  background-color: red;
+  background-size: cover !important;
   height: 90%;
   width: 100px;
+  border-radius: 15px;
+}
+@media (min-width: 1024px) {
+  .article-img-box {
+    width: 350px !important;
+    height: 70%;
+  }
+}
+@media (min-width: 768px) {
+  .article-img-box {
+    width: 300px !important;
+    height: 70%;
+  }
+}
+@media (orientation: landscape) {
+  .article-img-box {
+    width: 150px;
+  }
 }
 
 .article-text-box {
-  height: auto;
+  height: 100%;
   width: 50%;
 }
 
 .article-text-box p {
-  line-height: 1em;
+  line-height: 1.2em;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left;
+  color: #C64369;
+}
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 20px;
+  }
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 /*=========================================================
@@ -200,13 +329,95 @@ h1 {
 .delandpay-img-box {
   height: 20vh;
   width: 50%;
-  background-color: red;
+  background: url("../media/delivery.jpg") no-repeat;
+  background-size: cover !important;
+}
+@media (min-width: 1024px) {
+  .delandpay-img-box {
+    height: 40vh;
+  }
 }
 
 .delandpay-text-box {
   width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .delandpay-text-box p {
-  line-height: 1em;
+  line-height: 1.2em;
+  font-weight: 500;
+}
+
+.btn-primary {
+  align-self: flex-end;
+  background-color: #6ABF16;
+  color: #C64369;
+  font-weight: 700;
+  border: none;
+  width: 90%;
+  font-size: 15px;
+}
+@media (min-width: 1024px) {
+  .btn-primary {
+    width: 25%;
+  }
+}
+@media (min-width: 713px) {
+  .btn-primary {
+    width: 40%;
+  }
+}
+@media (min-width: 768px) {
+  .btn-primary {
+    width: 40%;
+  }
+}
+@media (min-width: 768px) and (orientation: landscape) {
+  .btn-primary {
+    width: 40%;
+  }
+}
+
+/*=========================================================
+---------------#FOOTER
+==========================================================*/
+footer {
+  width: 100%;
+  height: 3vh;
+  background-color: #5C636A;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  margin-top: 5%;
+}
+@media (min-width: 1024px) {
+  footer {
+    height: 3vh !important;
+  }
+}
+@media (orientation: landscape) {
+  footer {
+    height: 5vh;
+  }
+}
+
+.icofont-copyright {
+  color: #fff;
+}
+
+.icofont-support {
+  color: #fff;
+}
+
+.logo {
+  background: url("../media/logo.png") no-repeat;
+  background-size: contain;
+  height: 3vh;
+  width: 20px;
+  z-index: 111;
 }/*# sourceMappingURL=style.css.map */
