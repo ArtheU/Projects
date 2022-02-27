@@ -116,6 +116,12 @@ li:hover {
   background-size: 100% !important;
 }
 
+.btn-form {
+  width: 100% !important;
+  padding: 15px !important;
+  background-color: #6ABF16;
+}
+
 /*=========================================================
 ---------------#CATEGORIES
 ==========================================================*/
@@ -420,4 +426,34 @@ footer {
   height: 3vh;
   width: 20px;
   z-index: 111;
+}
+
+.suggested-box {
+  height: auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 5%;
+}
+
+.suggested {
+  width: 100%;
+  height: 50vh;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 5%;
+}
+
+.suggested-img {
+  background: url("../media/Suggested/suggested01.jpg") no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 40%;
+}
+
+.two {
+  background: url("../media/Suggested/suggested02.jpg") no-repeat !important;
 }/*# sourceMappingURL=style.css.map */
