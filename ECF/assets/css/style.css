@@ -27,6 +27,10 @@ p {
   background-color: #fff;
 }
 
+h5 {
+  color: #6ABF16;
+}
+
 /*=========================================================
 ---------------#HEADER
 ==========================================================*/
@@ -392,8 +396,10 @@ article {
 ==========================================================*/
 footer {
   width: 100%;
-  height: 3vh;
-  background-color: #5C636A;
+  height: auto;
+  border: 1px solid #6ABF16;
+  background-color: #6ABF16;
+  opacity: 0.6;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -403,13 +409,23 @@ footer {
 }
 @media (min-width: 1024px) {
   footer {
-    height: 3vh !important;
+    height: auto !important;
   }
 }
 @media (orientation: landscape) {
   footer {
-    height: 5vh;
+    height: auto;
   }
+}
+
+footer p {
+  font-weight: 500;
+  color: black;
+}
+
+footer h5 {
+  color: black;
+  font-weight: bold;
 }
 
 .icofont-copyright {
@@ -417,7 +433,8 @@ footer {
 }
 
 .icofont-support {
-  color: #fff;
+  color: black;
+  margin-right: 5%;
 }
 
 .logo {
@@ -456,4 +473,24 @@ footer {
 
 .two {
   background: url("../media/Suggested/suggested02.jpg") no-repeat !important;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+}
+
+.adresse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rs-social {
+  font-size: 36px;
+}
+
+.contact {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
